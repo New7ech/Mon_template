@@ -1,0 +1,9 @@
+// Glassmorphism effect for cards
+.card {
+  background: rgba(255, 255, 255, 0.2); // Semi-transparent background
+  backdrop-filter: blur(10px); // Blur effect for the background
+  -webkit-backdrop-filter: blur(10px); // Safari specific
+  border-radius: 10px; // Rounded corners
+  border: 1px solid rgba(255, 255, 255, 0.3); // Subtle border
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Soft shadow
+}

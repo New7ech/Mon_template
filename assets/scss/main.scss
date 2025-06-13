@@ -1,0 +1,65 @@
+// Light Theme CSS Variables (Default)
+:root {
+  --body-bg: #f8f9fa; // Light gray background
+  --text-color: #212529; // Dark text
+  --card-bg: #ffffff; // White card background
+  --header-bg: linear-gradient(to right, #3498db, #1abc9c); // From previous step
+  --sidebar-bg: #2c3e50; // From previous step
+  --link-color: #007bff;
+  --border-color: #dee2e6;
+}
+
+// Import theme files
+@import 'themes/dark';
+@import 'themes/light';
+
+// Import component files
+@import 'components/cards';
+
+// Global styles will go here
+
+// Color Palette Implementation
+
+// Sidebar background
+// Assuming a common class name like .sidebar or .main-sidebar
+// We might need to adjust this based on the actual HTML structure
+.sidebar, .main-sidebar, .sidebar-wrapper { // Added common variations
+  background-color: #2c3e50 !important; // Using !important to ensure override for now
+}
+
+// Header gradient
+// Assuming common class names like .header, .navbar, .main-header
+.header, .navbar, .main-header, .main-panel .header { // Added common variations
+  background: linear-gradient(to right, #3498db, #1abc9c) !important; // Using !important
+}
+
+// Micro-animations for buttons
+.btn {
+  transition: all 0.2s ease-in-out; // Smooth transition for hover effects
+
+  &:hover {
+    transform: translateY(-2px); // Slight lift effect
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow enhancement
+  }
+}
+
+// Initial global padding adjustments
+// This is a general starting point and might need to be targeted more specifically
+body, .main-panel, .content { // Targeting common layout containers
+    // padding: 1.5rem; // Applying general padding
+}
+
+// It's often better to apply padding to specific content wrappers
+// rather than broadly to body or main-panel to avoid breaking fixed elements.
+// For now, let's focus on a content wrapper if one exists, or a general class.
+// Let's assume a .content-wrapper or similar for now.
+.content-wrapper, .container-fluid { // Common Bootstrap container or a custom one
+     padding-left: 1.5rem !important;
+     padding-right: 1.5rem !important;
+}
+
+// For specific sections or components, more targeted padding might be needed.
+// Example for cards, if they don't have enough internal padding:
+.card .card-body { // Assuming Bootstrap card structure
+    // padding: 1.5rem; // If cards need internal padding
+}
