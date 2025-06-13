@@ -1,0 +1,54 @@
+// Light Theme CSS Variables (Default)
+:root {
+  --body-bg: #f8f9fa;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --header-bg: linear-gradient(to right, #3498db, #1abc9c); // As defined before
+  --sidebar-bg: #2c3e50; // As defined before
+  --link-color: #007bff;
+  --border-color: #dee2e6;
+  --component-bg: #ffffff; // General component background
+  --component-text-color: #212529; // General component text color
+}
+
+// Import theme files
+@import 'themes/dark';
+@import 'themes/light';
+
+// Import component files
+@import 'components/cards';
+
+// Global styles will go here
+
+// Color Palette Implementation
+
+// Sidebar background
+// Assuming common class names like .sidebar, .main-sidebar, .sidebar-wrapper
+.sidebar, .main-sidebar, .sidebar-wrapper {
+  background-color: #2c3e50 !important;
+}
+
+// Header gradient
+// Assuming common class names like .header, .navbar, .main-header, .main-panel .header
+.header, .navbar, .main-header, .main-panel .header {
+  background: linear-gradient(to right, #3498db, #1abc9c) !important;
+}
+
+// Micro-animations for buttons
+.btn {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Initial global padding adjustments
+.content-wrapper, .container-fluid, .container { // Common content containers
+     padding-left: 1.5rem !important;
+     padding-right: 1.5rem !important;
+}
+// The issue also mentions a 24px grid, which might relate to column gaps or component spacing.
+// For now, this padding addresses the direct 'padding 1.5rem' requirement.
+// Specific grid spacing might be handled component by component or with a more detailed grid system setup later.
