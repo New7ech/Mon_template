@@ -1,19 +1,29 @@
 // Dark Theme Overrides
 body.dark-mode {
-  --body-bg: #1a1a1a; // Very dark gray background
-  --text-color: #f8f9fa; // Light text
-  --card-bg: #2c2c2c; // Dark card background
-  // --header-bg can remain the same gradient or be adjusted if needed
-  // --sidebar-bg can remain the same or be adjusted if needed
-  --link-color: #64a2ff; // Lighter blue for links
-  --border-color: #444444; // Darker border color
+  --body-bg: #1a1a1a;
+  --text-color: #f8f9fa;
+  --card-bg: #2c2c2c; // Example for dark card, can be overridden by glassmorphism if card class matches
+  // --header-bg can remain the same gradient or be adjusted
+  // --sidebar-bg can remain the same or be adjusted
+  --link-color: #64a2ff;
+  --border-color: #444444;
+  --component-bg: #252525;
+  --component-text-color: #f8f9fa;
 
-  // Example of specific dark mode styling for glassmorphism cards
-  // to ensure text is readable and effect is still good
+  // Adjust glassmorphism for dark mode if .card is used
   .card {
-    background: rgba(40, 40, 40, 0.25); // Darker semi-transparent background for dark mode
+    background: rgba(40, 40, 40, 0.35); // Darker semi-transparent background for dark mode
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.15); // Lighter border for contrast
+    color: var(--text-color); // Ensure text inside the card is readable
+  }
+
+  // Ensure other components use dark theme variables
+  // Example for a generic panel or box
+  .panel, .box {
+    background-color: var(--component-bg);
+    color: var(--component-text-color);
+    border: 1px solid var(--border-color);
   }
 }

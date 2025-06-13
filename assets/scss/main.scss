@@ -1,12 +1,14 @@
 // Light Theme CSS Variables (Default)
 :root {
-  --body-bg: #f8f9fa; // Light gray background
-  --text-color: #212529; // Dark text
-  --card-bg: #ffffff; // White card background
-  --header-bg: linear-gradient(to right, #3498db, #1abc9c); // From previous step
-  --sidebar-bg: #2c3e50; // From previous step
+  --body-bg: #f8f9fa;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --header-bg: linear-gradient(to right, #3498db, #1abc9c); // As defined before
+  --sidebar-bg: #2c3e50; // As defined before
   --link-color: #007bff;
   --border-color: #dee2e6;
+  --component-bg: #ffffff; // General component background
+  --component-text-color: #212529; // General component text color
 }
 
 // Import theme files
@@ -21,45 +23,32 @@
 // Color Palette Implementation
 
 // Sidebar background
-// Assuming a common class name like .sidebar or .main-sidebar
-// We might need to adjust this based on the actual HTML structure
-.sidebar, .main-sidebar, .sidebar-wrapper { // Added common variations
-  background-color: #2c3e50 !important; // Using !important to ensure override for now
+// Assuming common class names like .sidebar, .main-sidebar, .sidebar-wrapper
+.sidebar, .main-sidebar, .sidebar-wrapper {
+  background-color: #2c3e50 !important;
 }
 
 // Header gradient
-// Assuming common class names like .header, .navbar, .main-header
-.header, .navbar, .main-header, .main-panel .header { // Added common variations
-  background: linear-gradient(to right, #3498db, #1abc9c) !important; // Using !important
+// Assuming common class names like .header, .navbar, .main-header, .main-panel .header
+.header, .navbar, .main-header, .main-panel .header {
+  background: linear-gradient(to right, #3498db, #1abc9c) !important;
 }
 
 // Micro-animations for buttons
 .btn {
-  transition: all 0.2s ease-in-out; // Smooth transition for hover effects
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    transform: translateY(-2px); // Slight lift effect
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow enhancement
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 }
 
 // Initial global padding adjustments
-// This is a general starting point and might need to be targeted more specifically
-body, .main-panel, .content { // Targeting common layout containers
-    // padding: 1.5rem; // Applying general padding
-}
-
-// It's often better to apply padding to specific content wrappers
-// rather than broadly to body or main-panel to avoid breaking fixed elements.
-// For now, let's focus on a content wrapper if one exists, or a general class.
-// Let's assume a .content-wrapper or similar for now.
-.content-wrapper, .container-fluid { // Common Bootstrap container or a custom one
+.content-wrapper, .container-fluid, .container { // Common content containers
      padding-left: 1.5rem !important;
      padding-right: 1.5rem !important;
 }
-
-// For specific sections or components, more targeted padding might be needed.
-// Example for cards, if they don't have enough internal padding:
-.card .card-body { // Assuming Bootstrap card structure
-    // padding: 1.5rem; // If cards need internal padding
-}
+// The issue also mentions a 24px grid, which might relate to column gaps or component spacing.
+// For now, this padding addresses the direct 'padding 1.5rem' requirement.
+// Specific grid spacing might be handled component by component or with a more detailed grid system setup later.
