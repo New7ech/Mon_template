@@ -1,1 +1,51 @@
-<h1>Messaging Module</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Messaging</title>
+    <link rel="stylesheet" href="messaging.css">
+    <!-- Optional: Link to global styles for consistency -->
+    <!-- <link rel="stylesheet" href="../../assets/css/custom-kaiadmin.css"> -->
+    <style>
+        /* Basic page styling, can be removed if using custom-kaiadmin.css */
+        body { font-family: sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .chat-container { width: 100%; max-width: 800px; height: 90vh; max-height: 700px; }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>#general</h2>
+        </div>
+        <div class="chat-messages">
+            <div class="message received">
+                <div class="message-sender">Alice</div>
+                <div class="message-bubble">
+                    <p>Hello everyone! How's the project going?</p>
+                    <span class="message-time">10:00 AM</span>
+                </div>
+            </div>
+            <div class="message sent">
+                <div class="message-sender">You</div>
+                <div class="message-bubble">
+                    <p>Hi Alice! Going well, just working on the messaging module.</p>
+                    <span class="message-time">10:01 AM</span>
+                </div>
+            </div>
+            <div class="message received">
+                <div class="message-sender">Bob</div>
+                <div class="message-bubble">
+                    <p>Good to hear! Let me know if you need any help with testing.</p>
+                    <span class="message-time">10:02 AM</span>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" class="message-input" placeholder="Type a message...">
+            <button class="send-button">Send</button>
+        </div>
+    </div>
+    <script src="messaging.js"></script>
+</body>
+</html>
